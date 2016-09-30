@@ -1,0 +1,49 @@
+<nav class="navbar navbar-light bg-faded navbar-fixed-top">
+  <div clas="container">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="/img/favicon.ico">
+      </a>
+    </div>
+    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+      <a class="navbar-brand" href="#">TADP Statistics</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <% if authenticated? %>
+            <li class="nav-item">
+              <a class="nav-link" href='/dashboard'>View your repos
+              </a>
+            </li>
+        <% end %>
+        <% if !authenticated? %>
+            <li class="nav-item">
+              <a class="nav-link" href='/login'>Sign in</a>
+            </li>
+        <% end %>
+        <li class="nav-item">
+          <a class="nav-link" href="http://tadp-utn-frba.github.io/quienessomos/">About us</a>
+        </li>
+      </ul>
+      <% if authenticated? %>
+          <ul class="nav navbar-nav navbar-rightside">
+            <li class="nav-item">
+              <p style="padding-top: 7px;">
+                Welcome <%= github_user.name %>
+              </p>
+            </li>
+            <li class="nav-item">
+              <img class="img-circle avatar-navbar" src='<%= env['warden'].user.avatar_url %>'/>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='/logout'>Sign out</a>
+            </li>
+          </ul>
+      <% end %>
+    </div>
+  </div>
+</nav>

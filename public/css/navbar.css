@@ -1,0 +1,15 @@
+.navbar-light {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.avatar-navbar {
+    max-width: 32px;
+    padding-top: 7px;
+}
+
+.navbar-rightside {
+    margin-right: -15px;
+    padding-left: 1100px;
+}

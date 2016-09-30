@@ -1,0 +1,134 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Boostrap 4 - Tutorial</title>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="author" content="Sam Norton">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,700,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<!--wrapper start-->
+<div class="wrapper" id="wrapper">
+
+  <!-- Navigation -->
+  <%= erb :index_navbar %>
+
+  <!--header-->
+  <%= erb :index_header %>
+
+  <!--about us-->
+  <section class="aboutus" id="aboutus">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="heading text-center">
+            <img class="dividerline" src="/img/sep.png" alt="">
+
+            <h2>About this app</h2>
+
+            <img class="dividerline" src="/img/sep.png" alt="">
+
+            <h3>
+              <mark>TADP Statistics</mark>
+              is a small web tool to look quickly at the organization's statistics.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="/img/statistics.jpg" alt="Card image cap" style="max-width: 180px">
+
+            <div class="card-block">
+              <h4 class="card-title">Simple Statistics</h4>
+
+              <p class="card-text">Enables to get some statistics for our public repos and also for other
+                organizations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-inverse card-primary text-center">
+            <img class="card-img-top" src="/img/oauth.png" alt="Card image cap" style="max-width: 180px">
+
+            <div class="card-block">
+              <h4 class="card-title">Authentication via Github OAuth</h4>
+
+              <p class="card-text">What is stated up.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-inverse card-info text-center">
+            <img class="card-img-top" src="/img/easy_to_use.jpg" alt="Card image cap" style="max-width: 180px">
+
+            <div class="card-block">
+              <h4 class="card-title">Easy to use (?)</h4>
+
+              <p class="card-text">The idea is to have some simple and fast statistics and general idea of the repos of
+                an organization.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <section class="footer" id="footer">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul>
+            <li><a href="https://github.com/tadp-utn-frba"><i class="fa fa-github"></i></a></li>
+          </ul>
+          <p>
+            &copy; 2016 - TADP<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!--wrapper end-->
+
+
+<!-- JavaScripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/tether.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+</script>
+
+</body>
+</html>

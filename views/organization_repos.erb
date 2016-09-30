@@ -1,0 +1,68 @@
+<style>
+    .repos {
+        margin-bottom: 180px;
+    }
+
+    .repo_item {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    .repo_item .left {
+        float: left;
+        width: 15%;
+        padding-left: 0px;
+    }
+
+    .repo_item .left img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .repo_item .right img {
+
+    }
+
+    .repo_item .right {
+        float: right;
+        padding-right: 3px;
+        padding-left: 20px;
+        width: 85%;
+    }
+
+    .team_face {
+        margin-bottom: 10px;
+        width: 100px;
+    }
+
+    .description {
+        font-family: "Open Sans", Arial;
+        font-size: 12px;
+        text-align: left;
+    }
+
+</style>
+
+<h2> <%= @organization %></h2>
+
+<div class='repos'>
+  <% @repos.each do |repo| %>
+      <div class='repo_item'>
+        <div class="left">
+          <img src="<%= repo[:owner][:avatar_url] %>"
+               class="img-circle team_face">
+        </div>
+        <div class="right">
+          <div class="description">
+            <h2><a href="/repo/view/<%= @organization %>/<%= repo[:name] %>"><%= repo[:name] %></a></h2>
+            <p><%= repo[:description] %></p>
+            <p>Last Updated: <%= repo[:updated_at]%></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="clear:both"></div>
+  <% end %>
+</div>
